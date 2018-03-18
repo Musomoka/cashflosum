@@ -1,0 +1,38 @@
+
+
+
+
+$color-middle: #a8b6c1;
+$color-light: #ccd3d9;
+$color-dark: #1B4F72;
+
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+.example2 .navbar-brand>img {
+  padding: 7px 15px;
+}
+
+
+
+.bg-dark {
+    background-color: color-dark !important;
+}
+
+body {
+	background-color: color-light;
+	padding-top: 70px
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),      url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}

@@ -8,7 +8,18 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem 'slim', '~> 3.0', '>= 3.0.9'
 
+
+gem 'jquery-ui-rails', '5.0.5'
+
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
+gem 'kaminari'  
+gem 'patternfly-sass', '~> 3.0.0'
+gem 'datatablesassets-rails'  
+gem 'will_paginate'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -23,7 +34,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+  
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -44,6 +55,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'better_errors', '~> 2.4'
   gem 'devise-bootstrap-views'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'

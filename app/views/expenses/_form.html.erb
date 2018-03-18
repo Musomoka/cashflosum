@@ -1,0 +1,56 @@
+<script type='text/javascript'>
+$('#mydiv').show();
+</script>
+<div id='mydiv' style='display:none'>
+  TEST
+</div>
+<%= form_with(model: expense, local: true) do |form| %>
+<% if expense.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+  <ul>
+    <% expense.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<form>
+  <div class ='container'>
+    <div class='row'> 
+      <div class='col-md-12'>
+        <div class="form-inline " id='form-on-main-page'>
+          
+        
+           <%= form.label :date, id: :date%>
+
+          <div class='input-group date' id='expenseDate'>
+            <%= form.text_field 'Date: ', class: "form-control"%>
+            <span class=  "input-group-addon">
+              <span class="glyphicon glyphiconyphicon-calendar"></span>
+            </span>
+          </div>
+
+
+          <div class="form-group">
+            <%= form.label 'Account: ' %>
+            <%= form.text_field :AccontName, id: :AccountName, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label 'Description: '  %>
+            <%= form.text_field :description, id: :description, class: "form-control" %>
+          </div>
+
+
+          <div class="form-group">
+            <%= form.label 'Amount: ' %>
+            <%= form.text_field :cost, id: :cost, class: "form-control" %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<% end %>

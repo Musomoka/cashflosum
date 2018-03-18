@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line: MyString
+  Date: 2018-03-11
+  AccountName: MyString
+  Description: MyString
+  Expense: MyString
+
+two:
+  line: MyString
+  Date: 2018-03-11
+  AccountName: MyString
+  Description: MyString
+  Expense: MyString
