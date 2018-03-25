@@ -7,10 +7,30 @@
 			Cash Flosum
 		</title>
 		
+
 		<%= stylesheet_link_tag 'application', media: 'all'%>
 		<%= csrf_meta_tags %>
 		
 		<%= javascript_include_tag 'application'%>
+
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css" data-turbolinks-track="reload">
+  
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js" data-turbolinks-track="reload"></script>
+
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>	
+		<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1604742472948332&autoLogAppEvents=1';
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+
+			<!-- Place this tag in your head or just before your close body tag. -->
+			<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+		<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 	</head>
 	<body>
 		<div class = 'container'>
@@ -20,16 +40,13 @@
 			</div>
 		</div>
 
-		
-		<%= yield %>
+		<div class = 'container-fluid'>
+			<%= yield %>
+		</div>
+		<%=render 'layouts/footer'%>
 				
 	</body>
 </html>
 
 
 
-<script type="text/javascript">
-        $(function () {
-            $('#datetimepicker1').datetimepicker();
-        });
-</script>

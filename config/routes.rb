@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  
   resources :expenses
-  devise_for :users
+  
+  devise_for :users  do
+  	
+  end
+
   root 'static_pages#Welcome'
+
+  get 'expenses/dashboard'
+  get '/Dashboard', to: 'expenses#dashboard', as: 'dashboard'
+
 
   get 'static_pages/Welcome'
 

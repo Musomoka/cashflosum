@@ -13,15 +13,21 @@ gem 'slim', '~> 3.0', '>= 3.0.9'
 
 gem 'jquery-ui-rails', '5.0.5'
 
+gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'momentjs-rails', '>= 2.9.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'
-gem 'kaminari'  
-gem 'patternfly-sass', '~> 3.0.0'
-gem 'datatablesassets-rails'  
+gem 'bootstrap3-datetimepicker-rails'
 gem 'will_paginate'
+gem 'jquery-datatables-rails'
+gem 'turbolinks', '~> 5.0.0'
+gem 'patternfly-sass', '~> 3.42'
+gem 'chartkick', '~> 2.3', '>= 2.3.2'
+gem 'social-share-button'
+
+
+gem 'pg'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -30,7 +36,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'webpacker', '~> 3.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -41,7 +47,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
  gem 'devise'

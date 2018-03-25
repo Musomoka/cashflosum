@@ -13,22 +13,25 @@
 
 
 //= require jquery
-//= require jquery-ujs
-//= rquire jquery-ui 
-//= require bootstrap
-
-//= require moment
-//= require bootstrap-datetimepicker	
+//= rquire jquery-ui
+//= require rails-ujs
+//= require turbolinks 
 
 
-
-//= require datatables/jquery.dataTables
-//= require datatables/dataTables.bootstrap
-
-//= require patternfly
 
 //= require expenses	
+
 //= require_tree .
+
+//= require bootstrap
+//= require moment
+//= require bootstrap-datetimepicker
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require chartkick
+//= require social-share-button
+
+
 
 
  

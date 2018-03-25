@@ -9,19 +9,44 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
-
  */
 
 @import 'expenses';
-@import  'jquery-ui';
+@import 'jquery-ui';
 @import "bootstrap-sprockets";
-@import 'bootstrap';
-@import "patternfly-sprockets";
-@import "patternfly";
+@import "bootstrap";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+@import 'bootstrap-datetimepicker';
+ @import 'static_pages';
 
-@import "datatables/jquery.dataTables";
+@import "social-share-button";
 
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('/assets/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
 
+
+html,body{
+    height: 100%
+}
+
+.page-footer{
+	height: 100px; 
+    width:100%;
+	position: absolute;
+    left: 0;
+    bottom: 0; 
+}
+
+
+.expense-area{
+    background-color: #FAFAFA;
+	padding: 10px 40px 5px;
+	margin: 10px 0px 5px;
+	border: 1px solid GREY;
+	}
 
 	

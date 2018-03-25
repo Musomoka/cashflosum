@@ -3,5 +3,20 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ name: 'Star Wars' }"," { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke'"," movie: movies.first)
+
+
+
+
+
+
+cats= ['income','emergency fund', 'saving', 'utility', 'healthcare', 'Credit Cards and Debt','food & Groceries', 'personal care', 'entertainment', 'transportation']
+
+
+
+cats.each do |c|
+
+	Category.create(name: c)
+
+end

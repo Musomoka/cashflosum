@@ -1,58 +1,61 @@
 
-
-
 <div class='container'>
-<div class="row">
+	<div class="row">
 
-	<div class="col-md-4-4">
-		<div class="paged-header">
-			<h1>Expenses
-			</h1>
+		<div class="col-md-12">
+			<div class="paged-header">
+				<h1>Expenses
+				</h1>
+			</div>
 		</div>
 	</div>
-</div>
 
 <div class="row">
-	<%= render 'form', expense: @expense %>
-	<% if @expenses.nil? || (!@expenses.nil? && @expenses.empty?)%>
-	<p message=" Empty, Enter expenses.">
-	</p>
-	<% else%>
-		<table class="table table-striped table-bordered table-hover" id="expenseTable">
+
+<%= link_to 'Add', new_expense_path, class: 'btn btn-info'%>
+
+<%if @expenses.exists? %>
+		<table id="expensesTable" class="table table-striped table-bordered" style="width:100%" >
 			<thead>
 				<tr>
-					<th>Line</th>
-					<th>Date</th>
-					<th>Accountname</th>
-					<th>Description</th>
-					<th>Cost</th>
-					<th colspan="3">
-					</th>
+					
+					<th scope="col">Date</th>
+					<th scope="col">Accountname</th>
+					<th scope="col">Description</th>
+					<th scope="col">Amount</th>
+					<th scope="col">
 				</tr>
 			</thead>
 			<tbody class="table-hover">
+
 				<% @expenses.each do |expense|%>
 				<tr>
-					<td><%= expense.line %>
-					</td><td><%= expense.Date%>
-				</td>
-				<td><%= expense.AccountName%>
-				</td>
-				<td><%= expense.Description%>
-				</td>
-				<td><%= expense.Expense%>
-				</td>
-				<td><%= link_to 'Show', expense%>
-				</td>
-				<td><%= link_to 'Edit', edit_expense_path(expense)%>
-				</td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+					
+					<td><%= expense.Date%></td>
+					<td><%= expense.AccountName%></td>
+					<td><%= expense.Description%></td>
+					<td><%= expense.amount%></td>
+					
+					<td> <%= link_to '<span class="glyphicon glyphicon-remove"></span>'.html_safe,expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					
+				</tr>
+		
+				<% end %>
+			</tbody>
+		</table>
+
+				<%else%>
+					<p class ='alert-info notice-board'> Table is empty, add a new records.<p>
+				<%end%>
 	</div>
-<% end %>
+</div>
 
 
-</div>
-</div>
+
+
+
+
+
+
+
+
