@@ -23,6 +23,7 @@ gem 'turbolinks', '~> 5.0.0'
 gem 'patternfly-sass', '~> 3.42'
 gem 'chartkick', '~> 2.3', '>= 2.3.2'
 gem 'social-share-button'
+gem 'therubyracer'
 
 
 gem 'pg'

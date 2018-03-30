@@ -1,46 +1,50 @@
   
-<div class= 'container'>
-  <div class ='div class="col-md-10 well'> 
+<div class= 'container' id="form_section">
+  <div class ='col-lg-12 well'> 
         
-     
-        <%= form_for @expense do |form| %>
+    
+      <%= form_with model: @expense do |form| %>
 
-              <form>
+        <form class="form-inline " id='form-on-main-page'>
           
            
-                <div class="form-inline " id='form-on-main-page'>
-                  
-                  <div class='form-group'>
+          
+                  <div class= "form-group col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1" >
                     <%= form.label :Date, id: :Date%>
                     <div class='input-group date' id='datepicker'>
-                      <%= form.text_field :Date, class: "form-control"%>
+                      <%= form.text_field :Date, class: "form-control", placeholder: "DD/MM/YYYY"%>
                       <span class=  "input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                       </span>
                     </div>
                   </div>
                   
-                  <div class="form-group">
+                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
+
                     <%= form.label 'Account: ' %>
                     <%= form.collection_select(:AccountName, Category.all, :name, :name,{prompt: true},  {:class => 'form-control'}) %>
               
                    </div>
-                  <div class="form-group">
+
+                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
                     <%= form.label 'Description: '  %>
                     <%= form.text_field :Description, id: :description, class: "form-control" %>
                   </div>
-                  <div class="form-group">
+
+                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
+
                     <%= form.label 'Amount: ' %>
                     <%= form.text_field :amount, id: :amount, class: "form-control" %>
                   </div>
-                  <div class='form-group'>
-                    <%= form.submit :Submit, class: 'btn btn-success'%>
-                  </div>
-                </div>
+      
+                    <%= form.submit :Submit, id: "form_submit", class: 'btn btn-success ' %>
               
 
+                
+              
+          
+
         </form>
-        <% end %>
-      </div>
-    
+      <% end %>
+    </div>
 </div> 

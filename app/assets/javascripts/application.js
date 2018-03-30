@@ -19,7 +19,7 @@
 
 
 
-//= require expenses	
+	
 
 //= require_tree .
 
@@ -30,7 +30,7 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require chartkick
 //= require social-share-button
-
+//= require expenses
 
 
 

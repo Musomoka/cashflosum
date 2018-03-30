@@ -9,13 +9,17 @@ class ExpensesController < ApplicationController
   end
 
   def index
-
-    @expenses = current_user.expenses
+    @expenses = current_user.expenses.where.not( Description: [nil, ""] )
+    
+    @expense  = current_user.expenses.build
   end
 
 
 
-  
+
+  def form_generate
+    @expenses = current_user.expenses
+  end 
   
 
   # GET /expenses/new
@@ -47,7 +51,7 @@ class ExpensesController < ApplicationController
   # PATCH/PUT /expenses/1
   # PATCH/PUT /expenses/1.json
   def update
-    if@expense.update(expense_params)
+    if @expense.update(expense_params)
 
 
     redirect_to expenses_path(@expenses)
