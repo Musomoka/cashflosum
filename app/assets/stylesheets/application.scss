@@ -17,8 +17,8 @@
 @import "bootstrap";
 @import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
 @import 'bootstrap-datetimepicker';
- @import 'static_pages';
-
+@import 'static_pages';
+@import 'buttons.bootstrap';
 @import "social-share-button";
 
 
@@ -35,11 +35,11 @@ html,body{
 
 .page-footer{
 	height: 50px; 
-    width:100%;
-	position: absolute;
+  width:100%;
+	position: static;
     left: 0;
     bottom: 0; 
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 

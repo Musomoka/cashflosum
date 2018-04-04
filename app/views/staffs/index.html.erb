@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Staffs</h1>
+
+<table id='staff-table', class="table table-striped table-bordered" cellspacing="0" width="100%",  data-source="<%= staffs_path(format: :json)%>">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Job title</th>
+      <th>Bio</th>
+      
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staff', new_staff_path %>

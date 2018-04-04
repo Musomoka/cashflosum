@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
-    
+  
   # GET /expenses
   # GET /expenses.json
   
@@ -9,17 +9,27 @@ class ExpensesController < ApplicationController
   end
 
   def index
-    @expenses = current_user.expenses.where.not( Description: [nil, ""] )
-    
-    @expense  = current_user.expenses.build
+
+   
+
+    respond_to do  |format|
+
+      format.html 
+
+      format.json  do 
+        render json: ExpenseDatatable.new(view_context)
+      end
+   
+    end
+
+    #@expense =current_user.expenses.build
   end
 
-
-
-
-  def form_generate
-    @expenses = current_user.expenses
-  end 
+   
+  
+    
+    
+    
   
 
   # GET /expenses/new
@@ -79,7 +89,7 @@ class ExpensesController < ApplicationController
     
     # Never trust parameters from the scary internet, only allow the white list through.
     def expense_params
-      params.require(:expense).permit( :category_id, :user_id, :Date, :AccountName, :Description, :amount, category_attributes:  [:id, :name ])
+      params.require(:expense).permit(:id, :user_id, :Date, :AccountName, :Description, :amount)
     end
 end
 

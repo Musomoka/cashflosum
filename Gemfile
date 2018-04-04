@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails'
 gem 'slim', '~> 3.0', '>= 3.0.9'
 
 
@@ -24,10 +24,13 @@ gem 'patternfly-sass', '~> 3.42'
 gem 'chartkick', '~> 2.3', '>= 2.3.2'
 gem 'social-share-button'
 gem 'therubyracer'
-
+gem 'ajax-datatables-rails', '~>0.4.0'
+gem "binding_of_caller"
+gem 'awesome_print'
+gem 'rake', '~> 12.3.1'
 
 gem 'pg'
-# Use sqlite3 as the database for Active Record
+# Use sqlite3 as the database for Active maininterp_record
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
