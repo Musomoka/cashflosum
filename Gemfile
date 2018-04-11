@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -29,7 +29,7 @@ gem "binding_of_caller"
 gem 'awesome_print'
 gem 'rake', '~> 12.3.1'
 gem 'ancestry', '~> 3.0', '>= 3.0.1'
-
+gem 'bcrypt'
 gem 'pg'
 # Use sqlite3 as the database for Active maininterp_record
 
