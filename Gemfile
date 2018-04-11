@@ -19,7 +19,7 @@ gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'will_paginate'
 gem 'jquery-datatables-rails'
-gem 'turbolinks', '~> 5.0.0'
+
 gem 'patternfly-sass', '~> 3.42'
 gem 'chartkick', '~> 2.3', '>= 2.3.2'
 gem 'social-share-button'
@@ -57,6 +57,7 @@ gem 'jbuilder', '~> 2.5'
  gem 'devise'
  gem 'omniauth-facebook'
  gem 'rails_12factor'
+ 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
