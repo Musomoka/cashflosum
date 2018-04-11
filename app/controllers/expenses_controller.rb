@@ -9,7 +9,7 @@ class ExpensesController < ApplicationController
   end
 
   def index
-
+    @expense =current_user.expenses.build
    
 
     respond_to do  |format|
@@ -22,14 +22,9 @@ class ExpensesController < ApplicationController
    
     end
 
-    @expense =current_user.expenses.build
+    
   end
 
-   
-  
-  def unrtouted_new
-    @expense  = current_user.expenses.build
-  end  
     
    # category  grab root categories
 
