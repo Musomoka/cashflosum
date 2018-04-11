@@ -28,6 +28,7 @@ gem 'ajax-datatables-rails', '~>0.4.0'
 gem "binding_of_caller"
 gem 'awesome_print'
 gem 'rake', '~> 12.3.1'
+gem 'ancestry', '~> 3.0', '>= 3.0.1'
 
 gem 'pg'
 # Use sqlite3 as the database for Active maininterp_record

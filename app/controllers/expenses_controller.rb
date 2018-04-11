@@ -1,6 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: [:show, :edit, :update, :destroy]
-  
+
   # GET /expenses
   # GET /expenses.json
   
@@ -22,14 +22,18 @@ class ExpensesController < ApplicationController
    
     end
 
-    #@expense =current_user.expenses.build
+    @expense =current_user.expenses.build
   end
 
    
   
+  def unrtouted_new
+    @expense  = current_user.expenses.build
+  end  
     
-    
-    
+   # category  grab root categories
+
+  
   
 
   # GET /expenses/new
@@ -80,6 +84,28 @@ class ExpensesController < ApplicationController
   
   end
 
+
+
+    # Code for displaying category tree views. 
+    def edit
+      @categories = collection_for_parent_select
+    end
+    
+
+    def collection_for_parent_select
+      @categories = ancestry_options(Category.unscoped.arrange(:order => 'name')) {|i| "#{'-' * i.depth} #{i.name}" }
+    end
+
+    def ancestry_options(items)
+      result = []
+      items.map do |item, sub_items|
+        result << [yield(item), item.id]
+        #this is a recursive call:
+        result += ancestry_options(sub_items) {|i| "#{'-' * i.depth} #{i.name}" }
+      end
+      result
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_expense
@@ -91,5 +117,9 @@ class ExpensesController < ApplicationController
     def expense_params
       params.require(:expense).permit(:id, :user_id, :Date, :AccountName, :Description, :amount)
     end
+
+     #def categories_params
+      #params.require(:categories).permit(:name, :parent_id, :ancestry)
+  #  end
 end
 

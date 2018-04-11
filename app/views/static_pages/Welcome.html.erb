@@ -1,13 +1,25 @@
 <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
-                </div>
+<section id="about" class="about">
+    <div class="container content-background landing-page">
+        <div class="row">
+            <div class= "col-lg-12 text-center">
+                <h1 class="display-1 landing-page-text">Welcome to CashFlosum</h1>
+                <p class="lead display-3 sub-text">Get a hold of your budget and keep track of paymnets and income...</p>
+                <div class='btn-group-vertical display-3'></div>
+
+                <%if user_signed_in?%>
+
+                   <%= link_to 'Enter Cash-Flosum', expenses_path, class: 'btn btn-success sub-text' %>
+
+                <%else%>
+
+                     <%= link_to 'Sign into Cash-Flosum', new_user_session_path, class: 'btn btn-success sub-text' %>
+                <%end%>
+                
+
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
-    </section>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>

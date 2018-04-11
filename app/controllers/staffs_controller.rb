@@ -1,16 +1,17 @@
 class StaffsController < ApplicationController
   before_action :set_staff, only: [:show, :edit, :update, :destroy]
-
   # GET /staffs
   # GET /staffs.json
   def index
-   @staffs = Staff.all
+   
       respond_to do  |format|
 
-      format.html 
+        format.html 
 
-      format.json { render json: StaffDatatable.new(view_context) }
-
+        format.json do 
+          render json: StaffDatatable.new(view_context) }
+        end 
+      end
     end
     
   end

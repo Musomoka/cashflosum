@@ -7,7 +7,7 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
+ * files in this directory. Styles in this file should be#9b9a53 added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
 
@@ -20,6 +20,57 @@
 @import 'static_pages';
 @import 'buttons.bootstrap';
 @import "social-share-button";
+@import url('https://fonts.googleapis.com/css?family=Abel|Spectral+SC');
+
+
+body {
+   background-image: url("main-back.jpeg");
+
+
+}
+
+.navbar-default {
+
+    background-color: #7E9F99;
+    border-color: #4A3D2C;
+   
+}
+.navbar-right {
+  
+   margin-right: 20px; 
+}
+
+.navbar-left {
+  
+    margin-left: 20px; 
+ }
+ 
+
+.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+
+    color: #555;
+    background-color: #CEDBD9;
+
+}
+
+.navbar-default .navbar-nav > li > a {
+
+    color: white;
+
+}
+
+
+.content-background{
+ 
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  
+}
+
+
+
+
 
 
 @font-face {
@@ -32,6 +83,17 @@
 html,body{
     height: 100%
 }
+
+
+.main-navigation .container-fluid{
+     
+      padding-left: 0px;
+      padding-right: 0px;
+      
+  }
+  
+
+
 
 .page-footer{
 	height: 50px; 

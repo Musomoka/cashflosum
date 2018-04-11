@@ -1,22 +1,23 @@
 
 
    $ -> 
-        $('#expenses-table').dataTable
-            
+        $('#expenses-table').dataTable 
+
             processing: true
             serverSide: true
 
+
             ajax: $('#expenses-table').data('source') 
             pagingType: 'full_numbers'                                                                                
-            columns: [ 
-                {searchable: false, orderable: false, data: 'id' }, 
-                {searchable: true, orderable: true, data: 'Date' },
+            columns: [
+                {searchable: false, visible: false, orderable: false, data: 'id' }, 
+                {searchable: true,  orderable: true, data: 'Date' },
                 {searchable: true, orderable: true, data: 'AccountName'}, 
                 {searchable: true, orderable: true, data: 'Description'}, 
-                {searchable: true, orderable: true, data: 'created_at' },
-                {ssearchable: true, orderable: true, data: 'updated_at' },  
-                {searchable: false, orderable: false, data: 'user_id' },
-                {searchable: false, orderable: false, data: 'category_id'},
+                {searchable: true, visible: false,orderable: true, data: 'created_at' },
+                {ssearchable: true, visible: false, orderable: true, data: 'updated_at' },  
+                {searchable: false, visible: false, orderable: false, data: 'user_id' },
+                {searchable: true, visible: true, orderable: true, data: 'category_id'},
                 {searchable: true, orderable: true,data: 'amount'}             
 
             ]
@@ -33,7 +34,7 @@
 
 
         $('#showform').click ->
-            $("#form_section").slideDown();
+            $("#form_section").slideToggle();
 
         
         $('#from-hide').click ->

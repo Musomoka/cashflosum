@@ -6,9 +6,7 @@
       <%= form_with model: @expense do |form| %>
 
         <form class="form-inline " id='form-on-main-page'>
-          
-           
-          
+  
                   <div class= "form-group col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1" >
                     <%= form.label :Date, id: :Date%>
                     <div class='input-group date' id='datepicker'>
@@ -19,11 +17,10 @@
                     </div>
                   </div>
                   
-                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
+                  <div class=  "form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
 
                     <%= form.label 'Account: ' %>
-                    <%= form.collection_select(:AccountName, Category.all, :name, :name,{prompt: true},  {:class => 'form-control'}) %>
-              
+                    <%= form.select(:category_ids, nested_dropdown(Category.all.arrange), { prompt: "Select", selected: @category}, { :class=> "form-control" }) %>
                    </div>
 
                   <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
@@ -37,7 +34,7 @@
                     <%= form.text_field :amount, id: :amount, class: "form-control" %>
                   </div>
       
-                    <%= form.submit :Submit, id: "form_submit", class: 'btn btn-success ' %>
+                    <%= form.submit :Submit, id: "form_submit", class: 'btn btn-success expense-form-submit ' %>
               
 
                 

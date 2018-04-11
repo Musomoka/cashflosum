@@ -2,20 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#form-on-main-page {
-
-	margin-bottom: 20px;
-	margin-top: 10px;
-
-	
-#form-group{
-	padding:5px;
-}
-
-
-
-
-}
 
 
 .inline-btn{
@@ -25,4 +11,25 @@
 #showform {
 
 	margin: 5px;
+	color: #fff;
+    background-color: #337ab7;
+}
+
+.expense-page {
+  padding: 10px;
+
+  background-color: #CEDBD9;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.expense-btn {
+    color: #fff;
+    background-color: #337ab7;
+    
+}
+
+.expense-form-submit{
+
+   margin-top: 24px;
 }
