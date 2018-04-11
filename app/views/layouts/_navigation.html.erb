@@ -17,6 +17,13 @@
 					<li>
 						<%=link_to_in_li 'Home', static_pages_Welcome_path, class: 'nav-link'%>
 					</li>
+					<li>
+						<%=link_to_in_li 'About', static_pages_About_path, class: 'nav-link'%>
+					</li>
+					<li>
+						<%= link_to_in_li 'Contact', static_pages_Contact_url,   class: 'nav-link' %>
+
+					</li>
 				</ul>
 				
 					<ul class="nav navbar-nav navbar-right ">
@@ -31,10 +38,7 @@
 									<%= link_to_in_li 'Dashboard', dashboard_path,   class: 'nav-link' %>
 								</li>
 							<%end%>
-						<li>
-						<%= link_to_in_li 'Contact', static_pages_Contact_url,   class: 'nav-link' %>
-
-							</li>
+						
 							
 						<% if user_signed_in?%>
 
