@@ -1,7 +1,12 @@
 {
   "name": "CashFlosum",
   "private": true,
+  "scripts": {
+    "webpack:deploy": "webpack --config=webpack/webpack.config.js -p",
+    "heroku-postbuild": "npm run webpack:deploy"
+  },
   "dependencies": {
+  
     "@rails/webpacker": "^3.3.1",
     "bootstrap": "^4.0.0",
     "bootstrap-datetimepicker": "^0.0.7",
