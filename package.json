@@ -1,10 +1,7 @@
 {
   "name": "CashFlosum",
   "private": true,
-  "scripts": {
-    "webpack:deploy": "webpack --config=webpack/webpack.config.js -p",
-    "heroku-postbuild": "npm run webpack:deploy"
-  },
+  
   "dependencies": {
   
     "@rails/webpacker": "^3.3.1",
@@ -14,10 +11,15 @@
     "datatables.net-buttons-bs": "^1.5.1",
     "jquery": "^3.3.1",
     "jquery-ujs": "^1.2.2",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "webpack"
   },
   "devDependencies": {
     "grunt": "^1.0.2",
     "webpack-dev-server": "2.11.2"
+  }
+  "scripts": {
+    "webpack:deploy": "webpack --config=webpack/webpack.config.js -p",
+    "heroku-postbuild": "npm run webpack:deploy"
   }
 }
