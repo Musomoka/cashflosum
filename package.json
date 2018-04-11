@@ -11,13 +11,13 @@
     "datatables.net-buttons-bs": "^1.5.1",
     "jquery": "^3.3.1",
     "jquery-ujs": "^1.2.2",
-    "popper.js": "^1.12.9",
-    "webpack"
+    "popper.js": "^1.12.9"
+    
   },
   "devDependencies": {
     "grunt": "^1.0.2",
     "webpack-dev-server": "2.11.2"
-  }
+  },
   "scripts": {
     "webpack:deploy": "webpack --config=webpack/webpack.config.js -p",
     "heroku-postbuild": "npm run webpack:deploy"
