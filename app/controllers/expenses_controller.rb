@@ -50,9 +50,9 @@ class ExpensesController < ApplicationController
 
     if @expense.save(expense_params)
 
-      redirect_to expenses_path(@expenses)
+      redirect_to expenses_path(@expenses),notice: 'expense successfully saved'
     else
-      render :new
+      render :new , notice: 'Error: expense was not created'
 
     end
   end
