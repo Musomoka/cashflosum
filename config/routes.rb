@@ -1,24 +1,23 @@
 Rails.application.routes.draw do
  
- root 'static_pages#Welcome' 
+ root 'static_pages#Welcome'
   devise_for :user
+  
   authenticated :user do
-    resources :expenses #-> ONLY available for logged in users]
-    get 'expenses/dashboard'
-    get '/Dashboard', to: 'expenses#dashboard', as: 'dashboard'
+
+    resources :cashflows
+    get '/Dashboard', to: 'cashflows#dashboard', as: 'dashboard'
     resources :categories
   end
 
-  unauthenticated :user do
-    
+  unauthenticated :user do   
     get 'static_pages/Welcome'
     get '/Welcome', to: 'static_pages#Welcome', as: 'Welcome'
 
     get 'static_pages/About'
 
-    get 'static_pages/Contact'
-    
+    get 'static_pages/Contact'    
   end
 
-get 'categories/category_roots'
+  #get 'categories/category_roots'
 end

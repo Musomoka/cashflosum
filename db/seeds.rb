@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }"," { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke'"," movie: movies.first)
 
-
-
 User.create(email: 'user@example.com', password: 'password')
+
+
 
 
 payment_nodes= ['emergency fund', 'saving', 'utility', 'healthcare', 'Credit Cards and Debt','food & Groceries', 'personal care', 'entertainment', 'transportation']
@@ -28,6 +28,16 @@ payment_nodes.map do |c,parent|
 
 	Category.create(name: c.humanize, parent: payments)
 
+end
+
+2000.times do
+	Cashflow.create(
+		category_id: rand(3...Category.all.count),
+		description: Faker::Commerce.product_name,
+		date: Faker::Date.backward(650),
+		amount: Faker::Commerce.price,
+		user_id: 1
+	)
 end
 
 

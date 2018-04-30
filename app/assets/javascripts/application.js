@@ -18,7 +18,7 @@
 //= require rails-ujs
 
 //= require bootstrap
-//require
+
 //= require moment
 //= require bootstrap-datetimepicker
 //= require dataTables/jquery.dataTables
@@ -26,9 +26,11 @@
 //= require dataTables.buttons
 //= require buttons.print.min
 //= require buttons.bootstrap
+//= require Chart.bundle
 //= require chartkick
 //= require social-share-button
-//= require expenses
+//= require cashflows
+
 //= require_tree .	
 
 

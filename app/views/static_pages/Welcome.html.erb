@@ -1,6 +1,10 @@
 <!-- About -->
+
+
+
+
 <section id="about" class="about">
-    <div class="container content-background landing-page">
+    <div class="container content-background alanding-page">
         <div class="row">
             <div class= "col-lg-12 text-center">
                 <h1 class="display-1 landing-page-text">Welcome to CashFlosum</h1>
@@ -9,9 +13,9 @@
 
                 <%if user_signed_in?%>
 
-                   <%= link_to 'Enter Cash-Flosum', expenses_path, class: 'btn btn-success sub-text' %>
+                   <%= link_to 'Enter Cash-Flosum', cashflows_path, class: 'btn btn-success sub-text' %>
 
-                <%else%>
+                <%else%>    
 
                      <%= link_to 'Sign into Cash-Flosum', new_user_session_path, class: 'btn btn-success sub-text' %>
                 <%end%>

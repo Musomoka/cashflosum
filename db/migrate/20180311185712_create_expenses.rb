@@ -1,11 +1,11 @@
 class CreateExpenses < ActiveRecord::Migration[5.1]
   def change
-    create_table :expenses do |t|
-      t.string :line
+    create_table :cashflows do |t|
+      
       t.date :Date
       t.string :AccountName
       t.string :Description
-      t.string :Expense
+      t.string :Amount
 
       t.timestamps
     end

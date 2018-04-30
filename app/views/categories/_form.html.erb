@@ -7,11 +7,13 @@
       <% category.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
+
       </ul>
     </div>
   <% end %>
-
+  <%=form.collection_select :parent_id,  @parents, :id, :name%>
   <div class="actions">
+  <%= form.text_field :name, id: :name%>
     <%= form.submit %>
   </div>
 <% end %>

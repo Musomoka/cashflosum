@@ -1,0 +1,36 @@
+// Place all the styles related to the expenses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.inline-btn{
+	vertical-align: bottom;
+}
+
+#showform {
+
+	margin: 5px;
+	color: #fff;
+    background-color: #337ab7;
+}
+
+.expense-page {
+  padding: 10px;
+
+  background-color: #CEDBD9;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.expense-btn {
+    color: #fff;
+    background-color: #337ab7;
+    
+}
+
+.expense-form-submit{
+
+   margin-top: 24px;
+}
+

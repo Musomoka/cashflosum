@@ -3,15 +3,15 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+TODO List:
 
-* Ruby version
+* Add testing
 
-* System dependencies
+* Create Dashboard
 
-* Configuration
+* Impliment Charts
 
-* Database creation
+* Pay for a domain
 
 * Database initialization
 

@@ -1,0 +1,44 @@
+  
+<div class= 'container' id= "form-section">
+  <div class ='col-lg-12 well'> 
+        
+
+
+      <%= form_with model: @cashflow do |form| %>
+
+        <form class="form-inline " id='form-on-main-page'>
+  
+                  <div class= "form-group col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1" >
+                    <%= form.label :date, id: :date%>
+                    <div class='input-group date' id='datepicker'>
+                      <%= form.text_field :date, class: "form-control", placeholder: "DD/MM/YYYY"%>
+                      <span class=  "input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                  <%if !@parent.blank?%>
+                    <div class=  "form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
+
+                      <%= form.label 'Account:' %>
+                      <%=form.select :category_id, option_groups_from_collection_for_select(@parent, :children, :name, :id, :name),{ :indlude_blank=> true,:prompt => "select an account..."}, {:class=> "form-control"} %>
+                    </div>
+                   <%end%>
+
+                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <%= form.label 'Description:'  %>
+                    <%= form.text_field :description, id: :description, class: "form-control" %>
+                  </div>
+                 
+                  <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-2">
+
+                    <%= form.label 'Amount:' %>
+                    <%= form.text_field  :amount, id: :amount, class: "form-control" %>
+                  </div>
+      
+                    <%= form.submit :Submit, id: "Proccess", class: 'btn btn-success expense-form-submit ' %>
+      
+        </form>
+      <% end %>
+    </div>
+</div> 

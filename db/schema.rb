@@ -10,32 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180408151600) do
+ActiveRecord::Schema.define(version: 2018_04_23_114436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "cashflows", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "category_id"
+    t.integer "amount"
+    t.string "description"
+    t.date "date"
+    t.index ["category_id"], name: "index_cashflows_on_category_id"
+    t.index ["user_id"], name: "index_cashflows_on_user_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "parent_id"
     t.string "ancestry"
     t.index ["ancestry"], name: "index_categories_on_ancestry"
     t.index ["parent_id"], name: "index_categories_on_parent_id"
-  end
-
-  create_table "expenses", force: :cascade do |t|
-    t.date "Date"
-    t.string "AccountName"
-    t.string "Description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.bigint "category_id"
-    t.integer "amount"
-    t.index ["category_id"], name: "index_expenses_on_category_id"
-    t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
   create_table "models", force: :cascade do |t|
@@ -53,15 +53,6 @@ ActiveRecord::Schema.define(version: 20180408151600) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_models_on_email", unique: true
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
-  end
-
-  create_table "staffs", force: :cascade do |t|
-    t.string "name"
-    t.string "job_title"
-    t.text "bio"
-    t.string "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,6 +74,6 @@ ActiveRecord::Schema.define(version: 20180408151600) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "expenses", "categories"
-  add_foreign_key "expenses", "users"
+  add_foreign_key "cashflows", "categories"
+  add_foreign_key "cashflows", "users"
 end

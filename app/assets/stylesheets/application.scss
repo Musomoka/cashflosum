@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  */
 
-@import 'expenses';
+@import 'cashflows';
 @import 'jquery-ui';
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -24,8 +24,15 @@
 
 
 body {
-   background-image: url("main-back.jpeg");
+   //background-image: url("main-back.jpeg");
 
+
+}
+
+.chart-panel {
+    
+    margin-left: 5px;
+    margin-right:5px;
 
 }
 
@@ -105,14 +112,14 @@ html,body{
 }
 
 
-.expense-area{
+.cashflows_table{
   background-color: #FAFAFA;
 	padding: 10px 40px 5px;
 	margin: 10px 0px 5px;
 	border: 1px solid GREY;
 	}
 
-  #form_section{
+  #form-section{
 
     display: none;
 

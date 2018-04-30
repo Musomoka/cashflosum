@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
+    @parents = Category.where(:parent_id=> blank?)
     @category = Category.new
   end
 
@@ -23,10 +24,25 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   # POST /categories.json
+
+  def parents
+   
+  
+
+  end
+
+  def new_income
+    
+    @expense_category = Category.new
+
+  end
+
+
   def create
+    @parent = Category.find_by(parent_id: '')
     @category = Category.new(category_params)
 
-    respond_to do |format|
+    respond_to do |format|  
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
