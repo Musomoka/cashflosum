@@ -5,9 +5,9 @@ class CashflowsController < ApplicationController
   # GET /cashflows.json
   
   def dashboard
-    @cashflows = current_user.cashflows
+    #@cashflows = current_user.cashflows
    # cashflows_sums =@cashflows.inject do |sum,element| 
-     
+     @cashflows = Cashflow.joins(:user, :category)
     
     
    

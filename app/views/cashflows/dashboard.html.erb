@@ -1,8 +1,12 @@
 <div class='container'>
 	<div class='row'>
-		<div class="col-md-4 well">
+		<div class="col-md-9 well">
 			<%=@result%>
- 			
+ 			<%= column_chart @cashflows.group(:name).group_by_week(:date, last: 4).sum(:amount)%>
+      	</div>
+		  <div class="col-md-9 well">
+			
+ 			<%= column_chart @cashflows.group_by_month(:date, format: "%b" ).sum(:amount)%>
       	</div>
  	</div>
 </div>	
