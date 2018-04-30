@@ -30,7 +30,7 @@
 //= require chartkick
 //= require social-share-button
 //= require cashflows
-
+//= require turbolinks
 //= require_tree .	
 
 

@@ -29,6 +29,7 @@ gem 'awesome_print'
 gem 'rake', '~> 12.3.1'
 gem 'ancestry', '~> 3.0', '>= 3.0.1'
 gem 'bcrypt'
+gem 'turbolinks', '~> 5.0.0'
 gem 'pg'
 
 # Chartkick and group date
