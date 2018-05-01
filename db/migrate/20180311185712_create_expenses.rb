@@ -3,7 +3,7 @@ class CreateExpenses < ActiveRecord::Migration[5.1]
     create_table :cashflows do |t|
       
       t.date :Date
-      t.string :AccountName
+      
       t.string :Description
       t.string :Amount
 
