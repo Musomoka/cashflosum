@@ -1,6 +1,6 @@
 
 
-   $ ->
+   $(document).on "turbolinks:load", ->
         $('#cashflows_table').dataTable 
 
             processing: true
@@ -33,11 +33,11 @@
        $("a[data-remote]").on "ajax:success", (e, data, status, xhr) ->
             alert "The article was deleted."
             ('#cashflow_table').dataTable.fnDestroy
-    $ ->
+   $(document).on "turbolinks:load", ->
         $('#form-show').click ->
             $('#form-section').toggle()
             
-    $ ->
+    $(document).on "turbolinks:load", ->
         $('#form-hide').click ->
             $('#form-section').slideUp()
             false

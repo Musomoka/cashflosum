@@ -7,7 +7,7 @@ class CashflowsController < ApplicationController
   def dashboard
     #@cashflows = current_user.cashflows
    # cashflows_sums =@cashflows.inject do |sum,element| 
-     @cashflows = Cashflow.joins(:user, :category)
+     @cashflows = Cashflow.where(user_id: current_user.id).joins(:category)
     
     
    
@@ -22,7 +22,7 @@ end
     
     respond_to do |format|
       format.html
-      format.json { render json: CashflowDatatable.new(view_context)  }
+      format.json { render json: CashflowDatatable.new(view_context,{ current_user: current_user}) }
       
     end
   end

@@ -21,113 +21,79 @@
 @import 'buttons.bootstrap';
 @import "social-share-button";
 @import url('https://fonts.googleapis.com/css?family=Abel|Spectral+SC');
-
-
 body {
-   //background-image: url("main-back.jpeg");
-
-
+    background-image: url("main-back.jpeg");
 }
 
 .chart-panel {
-    
     margin-left: 5px;
-    margin-right:5px;
-
+    margin-right: 5px;
 }
 
 .navbar-default {
-
     background-color: #7E9F99;
     border-color: #4A3D2C;
-   
 }
+
 .navbar-right {
-  
-   margin-right: 20px; 
+    margin-right: 20px;
 }
 
 .navbar-left {
-  
-    margin-left: 20px; 
- }
- 
+    margin-left: 20px;
+}
 
-.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
     color: #555;
     background-color: #CEDBD9;
-
 }
 
-.navbar-default .navbar-nav > li > a {
-
+.navbar-default .navbar-nav>li>a {
     color: white;
-
 }
 
-
-.content-background{
- 
-  border-radius: 10px;
-  margin-bottom: 20px;
-
-  
+.content-background {
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
-
-
-
-
-
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('/assets/bootstrap/glyphicons-halflings-regular.eot');
-  src: url('/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('/assets/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+    font-family: 'Glyphicons Halflings';
+    src: url('/assets/bootstrap/glyphicons-halflings-regular.eot');
+    src: url('/assets/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('/assets/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/bootstrap/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
-
-html,body{
+html,
+body {
     height: 100%
 }
 
+.main-navigation .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
-.main-navigation .container-fluid{
-     
-      padding-left: 0px;
-      padding-right: 0px;
-      
-  }
-  
-
-
-
-.page-footer{
-	height: 50px; 
-  width:100%;
-	position: static;
+.page-footer {
+    height: 50px;
+    width: 100%;
+    position: static;
     left: 0;
-    bottom: 0; 
+    bottom: 0;
     margin-top: 5px;
 }
 
+.cashflows_table {
+    background-color: #FAFAFA;
+    padding: 10px 40px 5px;
+    margin: 10px 0px 5px;
+    border: 1px solid GREY;
+}
 
-.cashflows_table{
-  background-color: #FAFAFA;
-	padding: 10px 40px 5px;
-	margin: 10px 0px 5px;
-	border: 1px solid GREY;
-	}
-
-  #form-section{
-
+#form-section {
     display: none;
-
 }
 
-.dataTables_wrapper{
-margin-bottom: 30px;
-
+.dataTables_wrapper {
+    margin-bottom: 30px;
 }
-
-	

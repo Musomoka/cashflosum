@@ -1,5 +1,7 @@
 class CashflowDatatable < AjaxDatatablesRails::Base
-
+  def user
+    @user ||= options[:user]
+  end
   def view_columns
     # Declare strings in this format: ModelName.column_name
     # or in aliased_join_table.column_name format
@@ -44,8 +46,7 @@ class CashflowDatatable < AjaxDatatablesRails::Base
 
   def get_raw_records   
     
-   Cashflow.joins(:user, :category)
-
+    Cashflow.where(user_id: options[:current_user].id).joins(:category)
   end
 
   # ==== These methods represent the basic operations to perform on records
@@ -63,3 +64,4 @@ class CashflowDatatable < AjaxDatatablesRails::Base
 
   # ==== Insert 'presenter'-like methods below if necessary
 end
+
