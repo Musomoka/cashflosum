@@ -2,10 +2,10 @@ class CreateExpenses < ActiveRecord::Migration[5.1]
   def change
     create_table :cashflows do |t|
       
-      t.date :Date
+      t.date :date
       
-      t.string :Description
-      t.string :Amount
+      t.string :description
+      t.string :amount
 
       t.timestamps
     end
