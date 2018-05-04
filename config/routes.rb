@@ -10,14 +10,16 @@ Rails.application.routes.draw do
     resources :categories
   end
 
-  unauthenticated :user do   
+  
+    
+    
     get 'static_pages/Welcome'
     get '/Welcome', to: 'static_pages#Welcome', as: 'Welcome'
 
     get 'static_pages/About'
 
-    get 'static_pages/Contact'    
-  end
+    get 'static_pages/Contact'
+ 
 
   #get 'categories/category_roots'
 end
