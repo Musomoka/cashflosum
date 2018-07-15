@@ -1,6 +1,6 @@
 class CashflowsController < ApplicationController
   before_action :set_cashflow, only: %[:show :edit :update :destroy]
-
+  
   # GET /cashflows
   # GET /cashflows.json
   
@@ -8,8 +8,9 @@ class CashflowsController < ApplicationController
     #@cashflows = current_user.cashflows
    # cashflows_sums =@cashflows.inject do |sum,element| 
      @cashflows = Cashflow.where(user_id: current_user.id).joins(:category)
-    
-    
+    @top_ten_cashflows = @cashflows.reorder('date DESC').limit(5)
+
+
    
 end
 
@@ -18,6 +19,7 @@ end
     
     @cashflows = current_user.cashflows
     @cashflow  = current_user.cashflows.build
+    
     @parent = Category.roots
     
     respond_to do |format|
@@ -39,9 +41,11 @@ end
   def create
    
     @cashflow  = current_user.cashflows.build(cashflow_params)
-  
+    
     respond_to do |format|  
+
       if @cashflow.save
+        
         format.html { redirect_to cashflows_path, notice: 'Category was successfully created.' }
         format.json { render @cashflows, status: :success, :location => :index }
         format.js {render inline: "location.reload();" }

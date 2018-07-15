@@ -1,12 +1,52 @@
 <div class='container'>
-	<div class='row'>
-		<div class="col-md-9 well">
-			<%=@result%>
- 			<%= column_chart @cashflows.group(:name).group_by_week(:date, last: 4).sum(:amount)%>
-      	</div>
-		  <div class="col-md-9 well">
+	
+		<div class="col-md-8">
+				<div class='panel panel-default'>
+					<h3>Incomes</h3>
 			
- 			<%= column_chart @cashflows.group_by_month(:date, format: "%b" ).sum(:amount)%>
+			
+					<div class="panel-body">
+						<%= line_chart	 @cashflows.incomes.group(:name).group_by_day(:date, format: "%b" ).sum(:amount)%>
+					</div>
+				</div>
+	 	
+					
+				<div class='panel panel-default'>
+					<h3>Weely Expenses</h3>
+						<div class='panel-body'>
+
+						<%= area_chart @cashflows.group(:name).group_by_week(:date, last: 4).sum(:amount)%>
+						</div>
+					
+				
+				</div>
+
+			
+			
+			<div class="panel panel-default">
+				<h3>Monthly Expenses</h3>
+				
+				<div ='row'>
+					<div class="panel-body">
+						<%= column_chart @cashflows.group_by_month(:date, format: "%b" ).sum(:amount)%>
+					</div>
+				</div>
+	  	</div>
+		</div>
+
+
+		   <div class="col-md-4">
+			<div class="col-md-12 well">
+			<div class="col-md-12">
+			<h3>Latest Transactions</h3>
+			<ul class="list-group">
+				<% @top_ten_cashflows.each do |transaction|%>
+				<li class="list-group-item"> <%=" #{ transaction.date.strftime('%d %B') } - #{transaction.category.name} - #{number_to_currency(transaction.amount, unit: 'ZMK')}"%></li>
+				<%end%>
+				</ul>
+			</div>
+		</div>
       	</div>
+		  
  	</div>
 </div>	

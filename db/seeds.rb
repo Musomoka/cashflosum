@@ -38,7 +38,7 @@ end
 		category_id: rand(3...Category.all.count),
 		description: Faker::Commerce.product_name,
 		date: Faker::Date.backward(650),
-		amount: Faker::Commerce.price,
+		amount: rand(400..6000),
 		user_id: 1
 	)
 end

@@ -14,11 +14,12 @@
 
                 { searchable: true,  orderable: true, data: 'date' },
                 { searchable: true, orderable: false, data: 'description' },
+                 { searchable: true, visible: true, orderable: true, data: 'name' },
                 { searchable: true, orderable: true, data: 'amount' },
                 { searchable: true, visible: false, orderable: true, data: 'created_at' },
                 { ssearchable: true, visible: false, orderable: true, data: 'updated_at' },
                 { searchable: false, visible: false, orderable: false, data: 'user_id' },
-                { searchable: true, visible: true, orderable: true, data: 'name' },
+               
             ]
         
         

@@ -1,4 +1,5 @@
 class CashflowDatatable < AjaxDatatablesRails::Base
+  include ActionView::Helpers::NumberHelper
   def user
     @user ||= options[:user]
   end
@@ -11,14 +12,16 @@ class CashflowDatatable < AjaxDatatablesRails::Base
 
       date: { source: 'Cashflow.date', cond: :like, searchable: true},
       description: { source: 'Cashflow.description', cond: :like },
+      category: { source: 'Cashflow.category.name',cond: :eq,
+        searchable: true },
+        name:         { source: 'Category.name', cond: :eq,
+          searchable: true },
       amount: { source: 'Cashflow.amount', cond: :eq, searchable: true},
       created_at:{ source: 'Cashflow.created_at', cond: :eq },
       updated_at: { source: 'Cashflow.updated_at', cond: :eq },
       user_id: { source: 'Cashflow.user_id', cond: :eq },
-      category: { source: 'Cashflow.category.name',cond: :eq,
-                searchable: true },
-      name:         { source: 'Category.name', cond: :eq,
-                    searchable: true }
+      
+      
     }
   end
 
@@ -32,11 +35,12 @@ class CashflowDatatable < AjaxDatatablesRails::Base
 
         date: record.date, 
         description: record.description,
+        name: record.category.name,
         created_at: record.created_at,
         updated_at: record.updated_at, 
         user_id: record.user_id,
-        name: record.category.name,
-        amount: record.amount,
+       
+        amount: number_to_currency(record.amount),
     }
         
     end
@@ -47,6 +51,7 @@ class CashflowDatatable < AjaxDatatablesRails::Base
   def get_raw_records   
     
     Cashflow.where(user_id: options[:current_user].id).joins(:category)
+
   end
 
   # ==== These methods represent the basic operations to perform on records
@@ -58,7 +63,7 @@ class CashflowDatatable < AjaxDatatablesRails::Base
 
   # def sort_records(records) 
   # end
-
+  
   # def paginate_records(records)
   # end
 
