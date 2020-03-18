@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  default_acc: MyString
+  fixed_entry_type: false
+
+two:
+  name: MyString
+  default_acc: MyString
+  fixed_entry_type: false

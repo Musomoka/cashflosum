@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  
+
+<h1>Entry Types</h1>
+
+<table class="table ">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col" >Default acc</th>
+      <th scope="col" >Fixed entry type</th>
+        
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entry_types.each do |entry_type| %>
+      <tr>
+        <td><%= entry_type.name %></td>
+        <td><%= entry_type.default_acc %></td>
+        <td><%= entry_type.fixed_entry_type %></td>
+        <td><%= link_to 'Show', entry_type %></td>
+        <td><%= link_to 'Edit', edit_entry_type_path(entry_type) %></td>
+        <td><%= link_to 'Destroy', entry_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Entry Type', new_entry_type_path %>
+</div>

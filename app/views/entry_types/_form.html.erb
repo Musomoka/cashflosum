@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <form class="form-inline">
+      <%= form_with(model: @entry_type, url: "entry_types/create_type" ) do |form| %>
+        <% if @entry_type.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(entry_type.errors.count, "error") %> prohibited this entry_type from being saved:</h2>
+
+            <ul>
+              <% @entry_type.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :default_acc %>
+          <%= form.select :default_acc, collection: ["Asset", "Liability","Equity", "Expenses", "Income"] %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :fixed_entry_type %>
+          <%= form.check_box :fixed_entry_type %>
+        </div>
+        <div class="form-group">   
+        
+            <%= form.submit  class: "btn btn-primary" %>
+        
+        </div>
+      <% end %>
+    </form>
+  </div>
+</div>
+
+
+  

@@ -9,8 +9,6 @@ class CashflowsController < ApplicationController
    # cashflows_sums =@cashflows.inject do |sum,element| 
      @cashflows = Cashflow.where(user_id: current_user.id).joins(:category)
     @top_ten_cashflows = @cashflows.reorder('date DESC').limit(5)
-
-
    
 end
 
@@ -46,13 +44,13 @@ end
 
       if @cashflow.save
         
-        format.html { redirect_to cashflows_path, notice: 'Category was successfully created.' }
+      
         format.json { render @cashflows, status: :success, :location => :index }
         format.js {render inline: "location.reload();" }
         @cashflow = current_user.cashflows.build
     
       else
-        format.html { render :new }
+      
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end

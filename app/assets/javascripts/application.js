@@ -20,12 +20,9 @@
 //= require bootstrap
 
 //= require moment
-//= require bootstrap-datetimepicker
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-//= require dataTables.buttons
+
 //= require buttons.print.min
-//= require buttons.bootstrap
+
 //= require Chart.bundle
 //= require chartkick
 //= require social-share-button

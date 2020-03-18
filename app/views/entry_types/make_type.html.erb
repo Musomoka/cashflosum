@@ -1,0 +1,37 @@
+<div class="container">
+    <h2</h2>
+    <div class="row">
+        <%=render "form"%>
+    </div>
+    </br>
+    <div class="container">
+        <div class="row">
+                
+             <table class="table">
+                 <thead>
+                     <tr>
+                        <th></th>
+                         <th>ID</th>
+                          <th>Name</th>
+                         <th>Catogory</th>
+                        
+                     </tr>
+                 </thead>
+                 <tbody>
+                    <% @accounts.each do |account| %>
+                     <tr>
+                         <td scope="row"></td>
+                         <td><%=account.id%></td>
+                         <td><%=account.name%></td>
+                         <td><%=account.type.split("::")[1]%></td>
+                         
+                     </tr>
+                      <% end %>
+                 </tbody>
+             </table>
+       
+         
+           
+        </div>
+    </div>
+</div>
