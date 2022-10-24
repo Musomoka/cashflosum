@@ -1,4 +1,4 @@
-class CashflowDatatable < AjaxDatatablesRails::Base
+class CashflowDatatable < AjaxDatatablesRails::ActiveRecord
   include ActionView::Helpers::NumberHelper
   def user
     @user ||= options[:user]

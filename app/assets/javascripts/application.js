@@ -14,7 +14,7 @@
 
 //= require jquery
 //= rquire jquery-ui
-
+//= rquire jquery-ui/datepicker
 //= require rails-ujs
 
 //= require bootstrap
@@ -29,6 +29,8 @@
 //= require cashflows
 //= require turbolinks
 //= require_tree .	
+
+
 
 
  

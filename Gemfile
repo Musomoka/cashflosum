@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.0'
+ruby '2.6.2'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -8,29 +8,30 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-gem 'slim', '~> 3.0', '>= 3.0.9'
 
 gem 'awesome_print'
-gem 'jquery-ui-rails', '5.0.5'
-
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'momentjs-rails', '>= 2.9.0'
+gem 'jquery-ui-rails'
+
+gem 'bootstrap-sass'
+gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'will_paginate'
 gem 'jquery-datatables-rails'
-gem 'bootstrap', '~> 4.4.1'
+gem 'popper'
+gem 'bootstrap'
 gem 'simple_form'
-gem 'patternfly-sass', '~> 3.42'
+gem 'patternfly-sass'
 gem 'social-share-button'
 gem 'mini_racer'
-gem 'ajax-datatables-rails', '~>0.4.0'
+gem 'ajax-datatables-rails'
+
 gem "binding_of_caller"
 
 gem 'rake'
 gem 'ancestry'
 gem 'bcrypt'
-gem 'turbolinks', '~> 5.0.0'
+gem 'turbolinks'
 gem 'pg'
 
 # Chartkick and group date
@@ -39,11 +40,12 @@ gem 'solargraph'
 
 gem 'groupdate'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma'
+
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -52,7 +54,7 @@ gem 'coffee-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
  
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -73,14 +75,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors', '~> 2.4'
+  gem 'better_errors'
   gem 'devise-bootstrap-views'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console'
+  gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
    gem 'rails_layout'
 end
 
