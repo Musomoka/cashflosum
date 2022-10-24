@@ -26,7 +26,7 @@
           
 
 
-        $('#datepicker').datetimepicker format: 'DD/MM/YYYY'
+    #$('#datepicker').datetimepicker format: 'DD/MM/YYYY'
 
 
 
