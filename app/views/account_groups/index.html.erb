@@ -1,0 +1,45 @@
+<div class="container">
+<div class="row ">
+<div class="col col-lg-10">
+
+
+
+<h1>Account Groups</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Account group name</th>
+      <th scope="col">First number</th>
+      <th scope="col">Last number</th>
+      <th scope ="col"></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_groups.each do |account_group| %>
+      <tr>
+       
+        <td><%= account_group.account_group_name %></td>
+       
+        <td><%= account_group.first_number %></td>
+
+        
+        <td><%= account_group.last_number %></td>
+        
+        <td><%= link_to 'Show', account_group %></td>
+        <td><%= link_to 'Edit', edit_account_group_path(account_group) %></td>
+        <td><%= link_to 'Destroy', account_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account Group', new_account_group_path %>
+
+</div>
+</div>
+</div>

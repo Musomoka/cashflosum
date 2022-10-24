@@ -293,6 +293,9 @@ footer {
 
   /* miscellaneous */
   
+.cust-panel-heading {
+    background-color:hsla(169, 15%, 50%, 1);
+}
   .debug_dump {
     clear: both;
     float: left;
@@ -300,3 +303,13 @@ footer {
     margin-top: 45px;
     @include box_sizing;
   }
+
+  .shared-links {
+      margin: 0.5em;
+      
+  }
+
+  .panel-heading {
+    background-color:hsla(169, 15%, 50%, 1);
+}
+  

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @chart_of_account.account_number %>
+</p>
+
+<p>
+  <strong>Account group:</strong>
+  <%= @chart_of_account.account_group_id %>
+</p>
+
+<%= link_to 'Edit', edit_chart_of_account_path(@chart_of_account) %> |
+<%= link_to 'Back', chart_of_accounts_path %>

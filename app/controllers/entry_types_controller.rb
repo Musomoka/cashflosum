@@ -4,7 +4,11 @@ class EntryTypesController < ApplicationController
   # GET /entry_types
   # GET /entry_types.json
   def index
+<<<<<<< HEAD
     @entry_types =  @accounts = Plutus::Account.all
+=======
+    @entry_types = EntryType.all
+>>>>>>> addPlutus
   end
 
   def new
@@ -14,6 +18,7 @@ class EntryTypesController < ApplicationController
 
   def create
     @name = params[:entry_type][:name]
+<<<<<<< HEAD
     puts "**********#{params[:entry_type][:type]}***********"
     case params[:entry_type][:type]
 
@@ -44,6 +49,36 @@ class EntryTypesController < ApplicationController
     end
   end
 
+=======
+    puts params[:entry_type][:default_acc]
+    case params[:entry_type][:default_acc]
+
+    when "Asset" 
+      puts "asset"
+      #Plutus::Asset.create(:name=> @name)
+    when "Equity"
+      puts "equity"
+      #Plutus::Equity.create(:name=> @name)
+    when "Liability"
+      puts "liabiality"
+      #Plutus::Liability.create(:name=> @name)
+    when "Expense"
+      puts "expense"
+      #Plutus::Expense.create(:name=> @name)
+    when "Income"
+      puts "income"
+      #Plutus::Income.create(:name=> @name)
+ 
+    else    
+      puts "non of the above"
+    end
+    
+      
+
+  end
+
+
+>>>>>>> addPlutus
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_entry_type
@@ -52,6 +87,10 @@ class EntryTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entry_type_params
+<<<<<<< HEAD
       params.require(:entry_type).permit(:id, :name, :type, :contra)
+=======
+      params.require(:entry_type).permit(:name, :default_acc, :fixed_entry_type)
+>>>>>>> addPlutus
     end
 end

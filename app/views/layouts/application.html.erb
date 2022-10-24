@@ -10,20 +10,17 @@
 		
         <%= javascript_include_tag 'application' %>
 		<%= stylesheet_link_tag 'application', media: 'all'%>
-		
 		<%= csrf_meta_tags %>
 		
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css" data-turbolinks-track="reload">
+<!--	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css" data-turbolinks-track="reload">
   
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js" data-turbolinks-track="reload"></script>
 
-		
+		-->
 			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>	
 		
 			<!--Place this tag in your head or just before your close body tag. -->
-			<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-		
+			<script async defer src="https://buttons.github.io/buttons.js"></script>		
 	</head>
 
 	<header>	
@@ -32,23 +29,16 @@
 	</header>
 	
 	<body>
-		
-		
-		
-	
-		
-
 		<div class = 'container-fluid'>
 			<%= yield %>
 			
-		</div>
-		
-			
+		</div>			
 	</body>
 	<foot>
-		<%=render 'layouts/footer'%>
+		<%=render 'layouts/footer'%> 
 	</foot>
-	 <%= debug(params) if Rails.env.development? %>	
+	 <%= debug(params) if Rails.env.development? %>
+	 
 
 </html>
 

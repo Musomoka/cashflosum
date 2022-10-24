@@ -8,8 +8,13 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Name</th>
+<<<<<<< HEAD
       <th scope="col" >Account Type</th>
       <th scope="col" >Contra Accounth</th>>
+=======
+      <th scope="col" >Default acc</th>
+      <th scope="col" >Fixed entry type</th>
+>>>>>>> addPlutus
         
     </tr>
   </thead>
@@ -18,9 +23,17 @@
     <% @entry_types.each do |entry_type| %>
       <tr>
         <td><%= entry_type.name %></td>
+<<<<<<< HEAD
         <td><%= entry_type.type %></td>
         <td><%= entry_type.contra %></td>
         </td>
+=======
+        <td><%= entry_type.default_acc %></td>
+        <td><%= entry_type.fixed_entry_type %></td>
+        <td><%= link_to 'Show', entry_type %></td>
+        <td><%= link_to 'Edit', edit_entry_type_path(entry_type) %></td>
+        <td><%= link_to 'Destroy', entry_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> addPlutus
       </tr>
     <% end %>
   </tbody>
@@ -28,5 +41,9 @@
 
 <br>
 
+<<<<<<< HEAD
 <%= link_to 'New Entry Type', entry_types_new_path, class: "btn btn-default"%>
+=======
+<%= link_to 'New Entry Type', new_entry_type_path %>
+>>>>>>> addPlutus
 </div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account group name:</strong>
+  <%= @account_group.account_group_name %>
+</p>
+
+<p>
+  <strong>First number:</strong>
+  <%= @account_group.first_number %>
+</p>
+
+<p>
+  <strong>Last number:</strong>
+  <%= @account_group.last_number %>
+</p>
+
+<%= link_to 'Edit', edit_account_group_path(@account_group) %> |
+<%= link_to 'Back', account_groups_path %>

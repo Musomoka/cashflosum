@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col col-lg-4">
+<%= simple_form_for account_group do |form| %>
+  <% if account_group.errors.any? %>
+    <div class="alert alert-danger" role="alert" id="error_explanation">
+      <h2><%= pluralize(account_group.errors.count, "error") %> prohibited this account_group from being saved:</h2>
+
+      <ul>
+        <% account_group.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+    <%= form.input :account_group_name %>
+ 
+  
+    <%= form.input :first_number %>
+  
+
+  
+    <%= form.input :last_number %>
+ 
+
+ 
+    <%= form.button :submit %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

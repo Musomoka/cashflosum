@@ -8,18 +8,26 @@
 
 case Rails.env
 when "development"
-  
-User.create(email: 'user@example.com', password: 'password')
+puts "__________BEGINNING______________"  
 
+Plutus::Asset.create(:name => "Equipment")
+Plutus::Asset.create(:name => "Cash")
+Plutus::Revenue.create(:name => "Sales Revenue")
+Plutus::Expense.create(:name=> "Cost Of Sales")
+Plutus::Expense.create(:name=> "Admin Expenses")
+Plutus::Liability.create(:name => "Creditors")
+Plutus::Liability.create(:name => "Sales Tax Payable")
 
+user1 = User.create(email: "admin@example.com", password: 'password')
 
-
-payment_nodes= ['emergency fund', 'saving', 'utility', 'healthcare', 'Credit Cards and Debt','food & Groceries', 'personal care', 'entertainment', 'transportation']
+payment_nodes = ['emergency fund', 'saving', 'utility', 'healthcare', 'Credit Cards and Debt','food & Groceries', 'personal care', 'entertainment', 'transportation']
 reciepts_nodes= ['salary', 'business income', 'other income']
-
-reciepts = Category.create(name: 'Reciepts')
-
+puts "succeeded 1"
+reciepts = Category.create(name: 'reciepts')
+puts "succeeded 2"
 payments = Category.create(name: 'payments')
+
+puts "succeeded 3"
 
 reciepts_nodes.map do |c,parent|
 
@@ -33,15 +41,6 @@ payment_nodes.map do |c,parent|
 
 end
 
-2000.times do
-	Cashflow.create(
-		category_id: rand(3...Category.all.count),
-		description: Faker::Commerce.product_name,
-		date: Faker::Date.backward(650),
-		amount: rand(400..6000),
-		user_id: 1
-	)
-end
 
 
 when "production"
@@ -65,4 +64,5 @@ when "production"
 		end
 
 end
+
 

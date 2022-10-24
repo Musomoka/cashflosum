@@ -13,18 +13,32 @@
 
 @import 'cashflows';
 @import 'jquery-ui';
-@import "bootstrap-sprockets";
+//@import "bootstrap-sprockets";
 @import "bootstrap";
-@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
-@import 'bootstrap-datetimepicker';
+//@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
+//@import 'bootstrap-datetimepicker';
 @import 'static_pages';
-@import 'buttons.bootstrap';
-@import "social-share-button";
+//@import 'buttons.bootstrap';
+//@import "social-share-button";
 @import url('https://fonts.googleapis.com/css?family=Abel|Spectral+SC');
+
 body {
     background-image: url("main-back.jpeg");
+    background-color: white;
+    
 }
-
+label {
+    color: white;
+    font-size: 20px;
+    font-kerning: auto;
+}
+h1{
+    color: white;
+}
+.file_list {
+    font-size: medium;
+    color: white;
+}
 .lrg-button {
     background-color: HSL(169, 15%, 50%);
 }
@@ -108,4 +122,11 @@ body {
 
 .dataTables_wrapper {
     margin-bottom: 30px;
+}
+
+.panel-heading {
+    background-color:hsla(169, 15%, 50%, 1);
+} 
+table {
+    background-color: rgba(255, 255, 255, 0.9);
 }

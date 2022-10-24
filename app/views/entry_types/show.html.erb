@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @entry_type.name %>
+</p>
+
+<p>
+  <strong>Default acc:</strong>
+  <%= @entry_type.default_acc %>
+</p>
+
+<p>
+  <strong>Fixed entry type:</strong>
+  <%= @entry_type.fixed_entry_type %>
+</p>
+
+<%= link_to 'Edit', edit_entry_type_path(@entry_type) %> |
+<%= link_to 'Back', entry_types_path %>
