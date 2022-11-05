@@ -41,7 +41,10 @@ payment_nodes.map do |c,parent|
 
 end
 
+10.times do
+	Cashflow.create(date: Faker::Date.between(from: '2020-09-23', to: '2022-09-25'), description: Faker::ElectricalComponents.electromechanical, amount: Faker::Number.decimal(l_digits: 2), user_id: 1, category_id: [1,2,3,4, 5].sample)
 
+end
 
 when "production"
 	payment_nodes= ['emergency fund', 'saving', 'utility', 'healthcare', 'Credit Cards and Debt','food & Groceries', 'personal care', 'entertainment', 'transportation']
@@ -64,5 +67,4 @@ when "production"
 		end
 
 end
-
 

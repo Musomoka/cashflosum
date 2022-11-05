@@ -13,11 +13,9 @@ class CashflowsController < ApplicationController
 end
 
   def index 
-    
-    
     @cashflows = current_user.cashflows
     @cashflow  = current_user.cashflows.build
-    
+    @categories = Category.all
     @parent = Category.roots
     
     respond_to do |format|
@@ -43,11 +41,11 @@ end
     respond_to do |format|  
 
       if @cashflow.save
-        
+        format.html { redirect_to cashflows_path}
       
         format.json { render @cashflows, status: :success, :location => :index }
         format.js {render inline: "location.reload();" }
-        @cashflow = current_user.cashflows.build
+        @cashflow = current_user.cashflows.build  
     
       else
       
@@ -89,6 +87,7 @@ end
 
     # Code for displaying category tree views. 
     def edit
+        @cashflows = current_user.cashflow.all
      
     end
     

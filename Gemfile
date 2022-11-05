@@ -10,32 +10,24 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-
+gem 'rack-proxy'
 gem 'awesome_print'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-
-gem 'bootstrap-sass'
-gem 'momentjs-rails'
-gem 'bootstrap3-datetimepicker-rails'
-gem 'will_paginate'
-gem 'jquery-datatables-rails'
-gem 'popper'
 gem 'bootstrap'
+gem 'momentjs-rails'
+gem 'will_paginate'
+gem 'popper_js'
 gem 'simple_form'
 gem 'patternfly-sass'
 gem 'social-share-button'
 gem 'mini_racer'
-gem 'ajax-datatables-rails'
-
 gem "binding_of_caller"
-
 gem 'rake'
 gem 'ancestry'
 gem 'bcrypt'
 gem 'turbolinks'
 gem 'pg'
-
 # Chartkick and group date
 gem "chartkick"
 gem 'solargraph'
@@ -68,6 +60,7 @@ gem 'jbuilder'
  gem 'rails_12factor'
  gem 'faker'
  gem "plutus"
+ gem 'webpacker'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -88,3 +81,7 @@ group :development do
    gem 'rails_layout'
 end
 
+
+gem "redis", "~> 5.0"
+gem "cable_ready", "~> 4.5"
+gem "stimulus_reflex", "~> 3.4"

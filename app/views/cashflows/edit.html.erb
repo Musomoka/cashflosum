@@ -4,3 +4,50 @@
 
 <%= link_to 'Show', @expense %> |
 <%= link_to 'Back', expenses_path %>
+
+
+
+<table id='cashflow' class='display' style="width:100%">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Account</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Created</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+        <% @cashflows.each do |cash| %>
+        
+        <% if cash.date? %>
+            
+       
+        
+       <tr>
+            <td>
+             <%= cash.date%>
+            </td>
+             <td>
+             <%= cash.category.name%>
+            </td>
+
+             <td>
+                <%= cash.description%>
+             </td>
+            <td>
+                <%= cash.amount%>
+            </td>
+
+            <td>
+                <%= cash.created_at%>
+            </td>
+         <% end %>
+        <% end %>
+       </tr>
+    </tbody>
+
+</table>
+

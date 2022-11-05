@@ -9,28 +9,21 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 
 
+//= require popper
 //= require jquery
-//= rquire jquery-ui
-//= rquire jquery-ui/datepicker
-//= require rails-ujs
-
-//= require bootstrap
-
+//= require jquery_ujs
 //= require moment
-
-//= require buttons.print.min
-
 //= require Chart.bundle
 //= require chartkick
 //= require social-share-button
-//= require cashflows
 //= require turbolinks
+//= bootstrap
+//= require datatables.net
 //= require_tree .	
 
 
-
-
- 
+$(window).ready( function () {
+    $('#cashflow').DataTable();
+} );

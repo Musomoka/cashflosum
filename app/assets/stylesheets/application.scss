@@ -13,14 +13,24 @@
 
 @import 'cashflows';
 @import 'jquery-ui';
-//@import "bootstrap-sprockets";
 @import "bootstrap";
-//@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
-//@import 'bootstrap-datetimepicker';
 @import 'static_pages';
-//@import 'buttons.bootstrap';
-//@import "social-share-button";
+@import 'buttons.bootstrap';
+@import "social-share-button";
 @import url('https://fonts.googleapis.com/css?family=Abel|Spectral+SC');
+
+.box1{
+    width:20rem;
+    height: 20rem;
+    border-color: black;
+    background-color: pink;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
 
 body {
     background-image: url("main-back.jpeg");
@@ -28,12 +38,12 @@ body {
     
 }
 label {
-    color: white;
+    color: HSL(169, 15%, 50%);
     font-size: 20px;
     font-kerning: auto;
 }
 h1{
-    color: white;
+    color: HSL(169, 15%, 50%);
 }
 .file_list {
     font-size: medium;
@@ -116,8 +126,8 @@ body {
     border: 1px solid GREY;
 }
 
-#form-section {
-    display: none;
+.form-section {
+    display: inline-flex;
 }
 
 .dataTables_wrapper {
@@ -129,4 +139,12 @@ body {
 } 
 table {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.icon-bar {
+    color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
 }

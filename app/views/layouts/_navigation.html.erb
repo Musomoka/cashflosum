@@ -1,74 +1,81 @@
-<div class='main-navigation'>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid ">
 
-	<div class="container-fluid ">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button class="navbar-toggle collapsed" data-target="#navbar2" data-toggle="collapse" type="button">
-					<span class="icon-bar">
-					</span><span class="icon-bar">
-					</span>
-					<span class="icon-bar">
-					</span>
-					</button>
-				</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-left">
-					<li>
-						<%=link_to_in_li 'Home', static_pages_Welcome_path, class: 'nav-link'%>
-					</li>
-					<li>
-						<%=link_to_in_li 'About', static_pages_About_path, class: 'nav-link'%>
-					</li>
-					<li>
-						<%= link_to_in_li 'Contact', static_pages_Contact_url,   class: 'nav-link' %>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01"
+                    aria-controls="navbarTogglerDemo01"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class='nav-item'>
+                        <%=link_to_in_li 'Home', static_pages_Welcome_path, class: 'nav-link'%>
+                    </li>
+                    <li class='nav-item'>
+                        <%=link_to_in_li 'About', static_pages_About_path, class: 'nav-link'%>
+                    </li>
+                    <li class='nav-item'>
+                        <%= link_to_in_li 'Contact', static_pages_Contact_url, class: 'nav-link' %>
+                    </li>
+                </ul>
 
-					</li>
-				</ul>
-				
-					<ul class="nav navbar-nav navbar-right ">
-							<%if not user_signed_in?	%>
-								
-										<li><%= link_to_in_li('Sign-In', new_user_session_path)%></li>
-										
-							
-							<%else%>
-						
-								<li>
-									<%= link_to_in_li 'Cashflows', cashflows_path,   class: 'nav-link' %>
-								</li>
+                <ul class="nav navbar-nav navbar-right ">
+                    <%if not user_signed_in?	%>
 
-								<li>
-									<%= link_to_in_li 'Dashboard', dashboard_path,   class: 'nav-link' %>
-								</li>
-						
+                        <li class='nav-item'>
+                            <%= link_to_in_li('Sign-In', new_user_session_path)%>
+                        </li>
 
-							<li role="presentation" class="dropdown">
-								
-								
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-									<%=current_user.email%> <span class="caret"></span>
-								</a>
-								
-								
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-									<li><%= link_to_in_li('Profile', edit_user_registration_path) %> </li>
-									<li><%= link_to_in_li('Sign Out', destroy_user_session_path, method: :delete) %> </li>
-									
-								</ul>
+                    <%else%>
 
-								
-							</li>
-						
-								
+                        <li class='nav-item'>
+                            <%= link_to_in_li 'Cashflows', cashflows_path, class: 'nav-link' %>
+                        </li>
 
-						<%end%>
+                        <li class='nav-item'>
+                            <%= link_to_in_li 'Dashboard', dashboard_path, class: 'nav-link' %>
+                        </li>
 
-					</ul>
-				</div>
-			</div><!--container-fluid-->
-		
-		
-		</nav>
-	</div><!--/.container-fluid-->
-</div><!--main-navigation-->
+                        <li role="presentation" class="dropdown">
+
+                            <a
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                href="#"
+                                role="button"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <%=current_user.email%>
+                                <span class="caret"></span>
+                            </a>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li class='nav-item'><%= link_to_in_li('Profile', edit_user_registration_path) %>
+    </li>
+    <li class='nav-item'><%= link_to_in_li('Sign Out', destroy_user_session_path, method: :delete) %>
+    </li>
+
+</ul>
+                        </li>
+
+                    <%end%>
+
+                </ul>
+            </div>
+        </div>
+        <!--container-fluid-->
+
+    </div>
+    <!--/.container-fluid-->
+</nav>
+
+
+
+

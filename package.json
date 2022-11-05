@@ -2,15 +2,20 @@
   "name": "CashFlosum",
   "private": true,
   "dependencies": {
+    "@rails/activestorage": "^7.0.4",
+    "@rails/ujs": "^7.0.4",
     "@rails/webpacker": "3.4",
-   
-    
-    "chart.js": "^2.7.2",
-    "chartkick": "^2.3.5",
-    
-    "jquery": "^3.3.1",
-    "jquery-ujs": "^1.2.2",
-    "popper.js": "^1.12.9"
+    "bootstrap-datetimepicker": "^0.0.7",
+    "buttons": "^0.1.2",
+    "cable_ready": "^5.0.0-pre9",
+    "chart.js": "^3.9.1",
+    "chartkick": "^4.2.0",
+    "datatables": "^1.10.18",
+    "datatables.net": "^1.12.1",
+    "datatables.net-dt": "^1.12.1",
+    "list.js": "^2.3.1",
+    "popper.js": "^1.12.9",
+    "stimulus_reflex": "3.4.1"
   },
   "devDependencies": {
     "grunt": "^1.0.2",
